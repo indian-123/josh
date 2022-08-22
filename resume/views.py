@@ -74,7 +74,7 @@ def resume(request):
             return render(request, 'resume.html', d)
     else:
         messages.info(request, "password not matching")
-        return render(request, 'form1.html')'''
+        return render(request, 'form1.html')
 
 
 def valid(request):
