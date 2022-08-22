@@ -23,7 +23,7 @@ from resume import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('resume', views.resume),
+    path('resume/', views.resume),
     path('signup', views.form),
     path('valid', views.valid),
 
