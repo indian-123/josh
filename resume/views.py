@@ -70,10 +70,10 @@ def resume(request):
                  'about': b.about, 'hobby': b.hobby, 'address': b.address, 'project': b.project_name,
                  'project_decs': b.project_description
                 , 'language': la, 'summary': b.summary, 'college': b.college, 'year': b.passout, 'cgpa': b.cgpa}
-            return render(request, 'resume.html')
+            return render(request, 'home.html')
     else:
         messages.info(request, "password not matching")
-        return render(request, 'home.html')
+        return render(request, 'form1.html')
 
 
 def valid(request):
