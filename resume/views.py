@@ -33,7 +33,7 @@ def resume(request):
     decs = request.POST.get('project_desc', '')
     clg = request.POST.get('college', '')
     cgp = request.POST.get('cgpa', '')
-    pout = request.POST.get('passout')
+    pout = request.POST.get('passout','')
 
     obj = Collection()
     obj.name = use
@@ -70,10 +70,10 @@ def resume(request):
                  'about': b.about, 'hobby': b.hobby, 'address': b.address, 'project': b.project_name,
                  'project_decs': b.project_description
                 , 'language': la, 'summary': b.summary, 'college': b.college, 'year': b.passout, 'cgpa': b.cgpa}
-            return render(request, 'resume.html', d)
+            return render(request, 'resume.html')
     else:
         messages.info(request, "password not matching")
-        return render(request, 'form1.html')
+        return render(request, 'home.html')
 
 
 def valid(request):
