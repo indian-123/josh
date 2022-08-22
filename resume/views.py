@@ -17,11 +17,11 @@ def home(request):
 
 def resume(request):
     return HttpResponse("<h1>Hello World</h1>")
-    '''use = request.POST.get('user1', '')
+    use = request.POST.get('user1', '')
     hmail = request.POST.get('gmail', '')
     domain = request.POST.get('domain1', '')
     mobile = request.POST.get('mobile1', '')
-    #image = request.FILES.get('image1', 'images/.mp3.jpg')
+    image = request.FILES.get('image1', 'images/.mp3.jpg')
     skill = request.POST.get('skill1', 'fresher')
     about = request.POST.get('about1', '')
     hobby = request.POST.get('hobby1', '')
@@ -41,7 +41,7 @@ def resume(request):
     obj.mail = hmail
     obj.domain = domain
     obj.mobile = mobile
-    #obj.image = image
+    obj.image = image
     obj.skill = skill
     obj.about = about
     obj.hobby = hobby
@@ -66,7 +66,7 @@ def resume(request):
             l = convert(b.skill)
             la = convert(b.language)
             print(b.image)
-            d = {'name': b.name, 'mail': b.mail, 'domain': b.domain, 'mobile': b.mobile, 'image': 'b.image',
+            d = {'name': b.name, 'mail': b.mail, 'domain': b.domain, 'mobile': b.mobile, 'image': b.image,
                  'skill': l,
                  'about': b.about, 'hobby': b.hobby, 'address': b.address, 'project': b.project_name,
                  'project_decs': b.project_description
@@ -88,7 +88,7 @@ def valid(request):
             la = convert(b.language)
             print(l)
             print(b.image)
-            d = {'name': b.name, 'mail': b.mail, 'domain': b.domain, 'mobile': b.mobile, 'image': 'b.image',
+            d = {'name': b.name, 'mail': b.mail, 'domain': b.domain, 'mobile': b.mobile, 'image': b.image,
                  'skill': l,
                  'about': b.about, 'hobby': b.hobby, 'address': b.address,
                  'project': b.project_name, 'project_decs': b.project_description
