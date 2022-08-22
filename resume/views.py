@@ -16,7 +16,6 @@ def home(request):
 
 
 def resume(request):
-    return HttpResponse("<h1>Hello World</h1>")
     use = request.POST.get('user1', '')
     hmail = request.POST.get('gmail', '')
     domain = request.POST.get('domain1', '')
