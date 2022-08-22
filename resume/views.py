@@ -16,7 +16,8 @@ def home(request):
 
 
 def resume(request):
-    use = request.POST.get('user1', '')
+    return HttpResponse("<h1>Hello World</h1>")
+    '''use = request.POST.get('user1', '')
     hmail = request.POST.get('gmail', '')
     domain = request.POST.get('domain1', '')
     mobile = request.POST.get('mobile1', '')
@@ -73,7 +74,7 @@ def resume(request):
             return render(request, 'resume.html', d)
     else:
         messages.info(request, "password not matching")
-        return render(request, 'form1.html')
+        return render(request, 'form1.html')'''
 
 
 def valid(request):
