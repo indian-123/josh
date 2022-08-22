@@ -64,13 +64,8 @@ def resume(request):
             b = Collection.objects.get(name=use)
             l = convert(b.skill)
             la = convert(b.language)
-            print(b.image)
-            d = {'name': b.name, 'mail': b.mail, 'domain': b.domain, 'mobile': b.mobile, 'image': b.image,
-                 'skill': l,
-                 'about': b.about, 'hobby': b.hobby, 'address': b.address, 'project': b.project_name,
-                 'project_decs': b.project_description
-                , 'language': la, 'summary': b.summary, 'college': b.college, 'year': b.passout, 'cgpa': b.cgpa}
-            return render(request, 'resume.html')
+            d = {'name': b.name, 'mail': b.mail, 'domain': b.domain, 'mobile': b.mobile, 'image': b.image,'skill': l,'about': b.about, 'hobby': b.hobby, 'address': b.address, 'project': b.project_name,'project_decs': b.project_description, 'language':la, 'summary': b.summary, 'college': b.college, 'year': b.passout, 'cgpa': b.cgpa}
+            return render(request, 'resume.html',d)
     else:
         messages.info(request, "password not matching")
         return render(request, 'form1.html')
