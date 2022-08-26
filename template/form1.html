@@ -15,73 +15,50 @@
     <form action="resume/" enctype="multipart/form-data" method="post">
          {% csrf_token %}
 
+        
+        <label >NAME * </label><input class="ip" name="user1" placeholder="name" type="text"   required>  <br>
 
-        <p>NAME*:</p>
-        <input id="ip" name="user1" placeholder="name" type="text" required><br><br>
         {%for i in messages%}
-        <div class="error"><p>{{i}}</p></div>
+        <div class="error"><label>{{i}}</label></div>
         {% endfor %}
-        <p>PASSWORD*:</p>
-        <input id="ip" name="password1" placeholder="password" type="password" required>
 
 
+        <label>PASSWORD*:</label><input class="ip" name="password1" placeholder="passsword" type="password" required><br>
 
-        <p>CONFIRM PASSWORD*:</p>
-        <input id="ip" name="password2" placeholder="confirm password" type="password" required>
+        <label>CONFIRM PASSWORD*:</label><input class="ip" name="password2" placeholder="confirm password" type="password" required><br>
 
-        <p>DOMAIN*:</p>
-        <input id="ip" name="domain" placeholder="domain" type="text" required><br><br><br>
+        <label>DOMAIN*:</label><input class="ip" name="domain" placeholder="domain" type="text" required><br>
 
-        <p>MOBILE NO*:</p><br>
-        <input id="ip" name="mobile1" placeholder="mobile" type="tel" required><br><br>
+        <label>MOBILE NO*:</label><input class="ip" name="mobile1" placeholder="mobile" type="tel" required><br>
 
-        <p>SELECT YOUR IMAGE(optional):</p><br> <input id="ip1" name="image1" type="file"><br><br>
+        <label>SELECT YOUR IMAGE(optional):</label><input class="ip" name="image1" type="file"> <br>
 
-        <p>EMAIL*:</p><br>
-        <input id="ip" name="gmail" placeholder="mail_id" type="email" required><br><br>
+        <label>EMAIL*:</label><input class="ip" name="gmail" placeholder="mail_id" type="email" required><br>
 
-        <p>ADDRESS*:</p><br>
-        <input id="ip" name="address1" placeholder="address" type="text" required><br><br>
+        <label>ADDRESS*:</label><input class="ip" name="address1" placeholder="address" type="text" required><br>
 
-        <p>SKILLS(optional):</p><br>
-        <input id="ip" name="skill1" placeholder="separate by spaces" type="text"><br><br>
+        <label>SKILLS(optional):</label><input class="ip" name="skill1" placeholder="separate by spaces" type="text"><br>
 
-        <p>ABOUT YOURSELF(optional):</p><br>
+        <label>ABOUT YOURSELF(optional):</label><textarea  class="ip" name="about1" placeholder="about me" ></textarea><br>
 
-        <input id="ip" name="about1" placeholder="about me" type="text"><br><br>
-        <p>YOUR HOBBIES(optional):</p><br>
-        <input id="ip" name="hobby1" placeholder="separate by spaces" type="text"><br><br>
+        <label>YOUR HOBBIES(optional):</label><input class="ip" name="hobby1" placeholder="separate by spaces" type="text"><br>
 
-        <p>COLLEGE NAME*:</p><br>
-        <input id="ip" name="college" placeholder="college" type="text" required><br><br>
+        <label>COLLEGE NAME*:</label><input class="ip" name="college" placeholder="college" type="text" required><br>
 
-        <p>CGPA*:</p><br>
-        <input id="ip" name="cgpa" placeholder="CGPA" type="text" required><br><br>
+        <label>CGPA*:</label><input class="ip" name="cgpa" placeholder="CGPA" type="text" required><br>
 
-        <p>PASSED OUT YEAR*:</p><br>
-        <input id="ip" name="passout" placeholder="passout" type="date" required><br>
-        <br>
+        <label>PASSED OUT YEAR*:</label><input class="ip" name="passout" placeholder="passout" type="date" required><br>
+        
+        <label>PROJECT NAME(optional):</label><input class="ip" name="project" placeholder="project_name" type="text"><div class="project"><br>
 
+        <label>PROJECT DESCRIPTION(optional):</label><textarea id="ip2" name="project_desc" placeholder="project_description" type="text"></textarea></div><br>
+        
+        <label>SUMMARY(optional):</label><textarea class="ip" name="summary" placeholder="Summary" type="text"></textarea><br>
 
-        <p>PROJECT NAME(optional):</p><br>
-        <input id="ip" name="project" placeholder="project_name" type="text">
-        <div class="project"><br><br>
+        <label>KNOWN LANGUAGES(optional):</label><input class="ip" name="language" placeholder="separate by spaces" type="text"><br>
 
-            <p>PROJECT DESCRIPTION(optional):</p><br>
-            <textarea id="ip2" name="project_desc" placeholder="project_description" type="text"></textarea></div>
-        <br><br>
-
-        <p>SUMMARY(optional):</p><br>
-        <textarea id="ip2" name="summary" placeholder="Summary" type="text"></textarea><br><br>
-
-        <p>KNOWN LANGUAGES(optional):</p><br>
-        <input id="ip" name="language" placeholder="separate by spaces" type="text"><br><br>
-<br>
-        <br>
-        <br>
-
-        <button id="buttonel">submit</button>
-        <br><br>
+        <button id="button">submit</button>
+        
 </div>
 </form>
 </body>
